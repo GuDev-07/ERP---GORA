@@ -1,0 +1,236 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    background-color: #2423239a;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #24232349;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: width 0.3s ease;
+}
+
+.logo-container {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logo-container img {
+    width: 150px;
+    height: auto;
+}
+
+/* Estilo dos menus */
+nav ul {
+    list-style: none;
+    width: 100%;
+}
+
+.sidebar ul li.active {
+    background-color: rgba(190, 178, 3, 0.425);
+    color: white;
+    border-radius: 5px;
+}
+
+.sidebar ul li.active a {
+    color: white; /* Para garantir que o link fique visível */
+    text-decoration: none;
+}
+
+nav ul li {
+    display: flex;
+    align-items: center;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+nav ul li i {
+    font-size: 20px;
+    margin-right: 12px;
+    color: #fff;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 600;
+    flex: 1;
+}
+
+nav ul li:hover {
+    background-color: rgba(190, 178, 3, 0.658);
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+}
+
+.main-content h1 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+}
+
+.main-content p {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 768px) {
+    body {
+        flex-direction: column; /* Sidebar e conteúdo em coluna */
+    }
+
+    .sidebar {
+        width: 100%; /* A sidebar ocupa toda a largura da tela */
+        height: auto; /* A altura da sidebar vai ser ajustada conforme o conteúdo */
+        position: relative;
+        padding: 10px;
+    }
+
+    .sidebar ul li {
+        justify-content: center; /* Centraliza o texto e ícones */
+        padding: 10px 15px; /* Menos padding para telas menores */
+    }
+
+    .main-content {
+        padding: 20px;
+        text-align: left; /* Alinha o texto à esquerda para telas pequenas */
+    }
+
+    .main-content h1 {
+        font-size: 30px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+
+    .main-content p {
+        font-size: 16px; /* Ajusta o tamanho do parágrafo */
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        padding: 5px; /* Menos padding na sidebar para telas muito pequenas */
+    }
+
+    .sidebar ul li {
+        padding: 8px 10px; /* Ajuste no padding */
+    }
+
+    .main-content {
+        padding: 10px;
+    }
+
+    .main-content h1 {
+        font-size: 24px; /* Ajusta ainda mais o tamanho da fonte */
+    }
+
+    .main-content p {
+        font-size: 14px; /* Ajusta o tamanho do parágrafo */
+    }
+}
+
+/*ESTILIZAÇÃO-PAGE-USER*/
+.container-U{
+    height: 90vh;
+    display: flex;
+    padding: 40px;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    border-color: #000000;
+
+}
+
+.fundo-user{
+    background-color: rgba(190, 178, 3, 0.658);
+}
+
+.div-cadastro{
+    margin-top: 100px;
+    width: 300px;   
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra elegante */
+    padding: 20px;
+
+}
+
+.div-cadastro h2{
+    font-size: 25px;
+    text-align: center;
+}
+
+label{
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+    font-weight: 800;
+    font-family: 'Open Sans', sans-serif;
+}
+
+input{
+    width: 100%;
+    padding: 2px;
+    margin-top: 10px;
+    background-color: #f9f9f96b;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra nos campos */
+    border-color: #0000006b;
+    border-radius: 10px; /* Cantos arredondados */
+    font-family: Arial, sans-serif;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.582);
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 25px;
+    border: none;
+}
+
+.btn:hover{
+    margin-top: 15px;
+    width: 100%;
+    padding: 10px;
+    background-color: rgba(0, 0, 255, 0.884);
+    cursor: pointer;
+    border: none;
+    color: white;
+    border-radius: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra ao passar o mouse */
+    transition: 1s;
+}
+
+
+
